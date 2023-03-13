@@ -1,0 +1,28 @@
+---
+
+version: '3'
+
+services:
+  mediawiki:
+    image: mediawiki:1.39
+    container_name: mediawiki
+    working_dir: '/home/nakadats/mediawiki'
+    tty: true
+    ports:
+      - 80:80
+    volumes:
+      - "/Users/nakadats/Desktop/coconala/mediawiki:/home/nakadats/mediawiki"
+      - "/Users/nakadats/Desktop/coconala/mediawiki/files/LocalSettings.php:/var/www/html/LocalSettings.php"
+  mysql:
+    container_name: mariadb
+    image: mariadb
+    working_dir: '/home/nakadats/mysql'
+    tty: true
+    environment:
+      MYSQL_DATABASE: my_wiki           # DB名
+      MYSQL_USER: mysql                 # MYSQL_DATABASEのOwner 
+      MYSQL_PASSWORD: passw0rd1234      # MYSQL_USERのパスワード
+      MYSQL_ROOT_PASSWORD: passw0rd1234 # スーパーユーザのパスワード
+    ports:
+      - "3306:3306"
+
