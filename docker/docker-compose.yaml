@@ -11,8 +11,8 @@ services:
     ports:
       - 80:80
     volumes:
-      - "/Users/nakadats/Desktop/coconala/mediawiki:/home/nakadats/mediawiki"
       - "/Users/nakadats/Desktop/coconala/mediawiki/files/LocalSettings.php:/var/www/html/LocalSettings.php"
+      - "/Users/nakadats/Desktop/coconala/mediawiki/images:/var/www/html/images"
   mysql:
     container_name: mariadb
     image: mariadb
@@ -25,4 +25,6 @@ services:
       MYSQL_ROOT_PASSWORD: passw0rd1234 # スーパーユーザのパスワード
     ports:
       - "3306:3306"
+    volumes:
+      - "/Users/nakadats/Desktop/coconala/mediawiki/db:/var/lib/mysql"
 
