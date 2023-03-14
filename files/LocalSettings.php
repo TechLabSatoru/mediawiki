@@ -19,8 +19,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "fsdn";
-$wgMetaNamespace = "Fsdn";
+$wgSitename = "FSDS";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -100,14 +99,14 @@ $wgLocaltimezone = "UTC";
 ## be publicly accessible from the web.
 #$wgCacheDirectory = "$IP/cache";
 
-$wgSecretKey = "6816c3c5ed17ecb92f8725f14c668bc4b55dcf10754ab794e628d540a0f796de";
+$wgSecretKey = "bedf7c65f5a538d740fcf444e1228b86ee9c9dce91e2ba513835003ac82ee90d";
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "fced1e3f10779cc4";
+$wgUpgradeKey = "8189ba6a15aea303";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
