@@ -41,3 +41,14 @@ body.page-Example {
 5. 変更を保存し、特定のページにCSSが適用されることを確認してください。
 
 注意：ページ名にスペースが含まれる場合は、「_」に置き換えてください。例えば、「Example Page」の場合は「Example_Page」として指定します。
+
+## 特定のページにCSSを当てる方法
+
+- URLが`http://localhost/index.php/利用者:FSDS/example/`の場合は、以下のコードでCSSを当てることが可能です.
+
+```shell
+body.page-利用者_FSDS_example {
+  /* CSS rules */
+  /* ... */
+}
+```
