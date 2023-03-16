@@ -45,3 +45,54 @@ if (mw.config.get('wgPageName') === 'Example') {
 5. 変更を保存し、特定のページにJavaScriptが適用されることを確認してください。
 
 注意：ページ名にスペースが含まれる場合は、「_」に置き換えてください。例えば、「Example Page」の場合は「Example_Page」として指定します。また、特定のページだけでなく、全てのページにJavaScriptを適用したい場合は、MediaWiki:Common.jsを編集してください。
+
+## 特定のページにJSをあてる方法
+
+- JSをあてるページである`http://localhost/index.php/Example`へアクセスします.
+
+- `http://localhost/index.php/MediaWiki:Common.js`へアクセスします.
+
+- 下記の中にJavaScriptを記載します.
+
+```javascript
+if (mw.config.get('wgPageName') === 'Example') {
+  function importArticles() {
+      var args = Array.prototype.slice.call(arguments),
+          articles = [],
+          i;
+      for (i = 0; i < args.length; i++) {
+          if (Array.isArray(args[i])) {
+              articles = articles.concat(args[i]);
+          } else if (typeof args[i] === 'string') {
+              articles.push(args[i]);
+          }
+      }
+      return mw.loader.load(articles);
+  }
+
+  // Load some MediaWiki modules using mw.loader.using
+  mw.loader.using(['jquery', 'mediawiki.util'], function () {
+
+      // Add some event listeners to the document when it is ready
+      $(document).ready(function () {
+
+          // Make the tabs at the top of the page clickable and show which one is selected
+          var tabs = document.querySelectorAll('span[role="tab"]');
+          for (var i = 0; i < tabs.length; i++) {
+              tabs[i].addEventListener('click', function () {
+                  var selectedTab = document.querySelector('span[role="tab"][aria-selected="true"]');
+                  if (selectedTab) {
+                      selectedTab.setAttribute('aria-selected', 'false');
+                  }
+                  this.setAttribute('aria-selected', 'true');
+              });
+          }
+
+          // Load another JavaScript file that contains a library of functions used by the whole site
+          mw.loader.load('MediaWiki:Gadget-site-lib.js');
+
+      });
+
+  });
+}
+```
