@@ -1,5 +1,8 @@
+## 概要
 
-## 実行結果
+- CSSをあてる方法について記載します.
+
+## 全てのページにJavaScriptをあてる方法
 
 - 登録したユーザでログインして下さい.
 
@@ -8,10 +11,6 @@
 - 画面右上の編集タブを押下して下さい.
 
 - CSSを記載して、`ページを保存`ボタンを押下して下さい.
-
-## 参考資料
-
-- [MediaWikiでCSSを編集する方法](https://kw-note.com/cms/edit-mediawiki-css/)
 
 ## 特定のページにCSSを当てる方法
 
@@ -35,16 +34,9 @@ body.page-Example {
   color: #000;
 }
 ```
-
 このCSSは、ページ名が「Example」の場合に適用されます。CSSの適用先は、ページ名に対応する「page-」プレフィックスで指定されます。
 
-5. 変更を保存し、特定のページにCSSが適用されることを確認してください。
-
-注意：ページ名にスペースが含まれる場合は、「_」に置き換えてください。例えば、「Example Page」の場合は「Example_Page」として指定します。
-
-## 特定のページにCSSを当てる方法
-
-- URLが`http://localhost/index.php/利用者:FSDS/example/`の場合は、以下のコードでCSSを当てることが可能です.
+5. URLが`http://localhost/index.php/利用者:FSDS/example/`の場合は、以下のコードでCSSを当てることが可能です.
 
 ```shell
 body.page-利用者_FSDS_example {
@@ -52,3 +44,11 @@ body.page-利用者_FSDS_example {
   /* ... */
 }
 ```
+
+6. 変更を保存し、特定のページにCSSが適用されることを確認してください。
+
+注意：ページ名にスペースが含まれる場合は、「_」に置き換えてください。例えば、「Example Page」の場合は「Example_Page」として指定します。
+
+## 参考資料
+
+- [MediaWikiでCSSを編集する方法](https://kw-note.com/cms/edit-mediawiki-css/)
