@@ -37,5 +37,3 @@ $wgDefaultSkin = 'myskin';
 ```shell
 $ tar -xzf /var/www/html/images/Splash-REL1_39-05b1b03.tar.gz  -C /var/www/html/skins/
 ```
-
-```
