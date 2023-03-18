@@ -21,3 +21,21 @@ $wgDefaultSkin = 'myskin';
 ## 問題点
 
 - 全てのページに同様のスキンがあてられることになり、ユーザが独自でスキンを使用することは出来ません.
+
+## 他の方法（技術要件が高い）
+
+- カスタムスキンを作成することも可能です.
+
+- 利用可能なスキンをhttps://phabricator.wikimedia.org/source/skins/で検索して下さい.
+
+- 該当ファイル（tar.gzなど）を`/var/www/html/skins/`配下に配置することでカスタムスキンを使用することが可能です.
+
+- 以下は配置するためのコマンドです.
+
+    - 今回はダウンロードしたファイルをローカルの`./images/`配下に配置しました.
+
+```shell
+$ tar -xzf /var/www/html/images/Splash-REL1_39-05b1b03.tar.gz  -C /var/www/html/skins/
+```
+
+```
