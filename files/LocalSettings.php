@@ -137,4 +137,7 @@ wfLoadSkin( 'Splash' );
 
 # End of automatically generated settings.
 # Add more configuration options below.
+
+# ユーザ独自にCSSとJavaScriptをあてることができる様にする
 $wgAllowUserCss = true;
+$wgAllowUserJs = true;
