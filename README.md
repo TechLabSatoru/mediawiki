@@ -11,6 +11,11 @@ $ cd docker
 $ docker compose up -d
 
 # http://localhostにアクセスして下さい.
+# エラーが発生する場合は以下コマンドを実行してコンテナの中に入りコマンドを実行して下さい.
+# スキンを追加したのでエラーが発生します.
+# コマンドを打つのが面倒くさい場合は、LocalSettings.phpのl.136を削除して下さい.
+$ docker exec -it mediawiki bash 
+mediawiki# tar -xzf /var/www/html/images/Splash-REL1_39-05b1b03.tar.gz  -C /var/www/html/skins/
 
 # dockerコンテナを削除します.
 $ docker compose down --rmi all --volumes --remove-orphans
