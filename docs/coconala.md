@@ -107,10 +107,6 @@ body {
     - 下記関数は、MediaWikiに記載した内容が`Hello World`に変換されます.
 
 ```javascript
-$(function() {
-    mw.util.addCSS('.my-custom-class { color: red; }');
-});
-
 function changeText(className) {
   var elements = document.getElementsByClassName(className);
   for (var i = 0; i < elements.length; i++) {
