@@ -16,6 +16,7 @@ $ docker compose up -d
 # コマンドを打つのが面倒くさい場合は、LocalSettings.phpのl.136を削除して下さい.
 $ docker exec -it mediawiki bash 
 mediawiki# tar -xzf /var/www/html/images/Splash-REL1_39-05b1b03.tar.gz  -C /var/www/html/skins/
+mediawiki# cp -r /var/www/html/images/Solidarity /var/www/html/skins/
 
 # dockerコンテナを削除します.
 $ docker compose down --rmi all --volumes --remove-orphans

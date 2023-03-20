@@ -134,6 +134,7 @@ wfLoadSkin( 'Vector' );
 # 独自スキンは、/var/www.html/skins/配下に作成して下さい.
 # 他の利用可能なスキンは、https://phabricator.wikimedia.org/source/skins/を参考にして下さい.
 wfLoadSkin( 'Splash' );
+wfLoadSkin( 'Solidarity' );
 
 # End of automatically generated settings.
 # Add more configuration options below.

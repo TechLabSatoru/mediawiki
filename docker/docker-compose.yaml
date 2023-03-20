@@ -12,7 +12,6 @@ services:
       - 80:80
     volumes:
       - "/Users/nakadats/Desktop/coconala/mediawiki/files/LocalSettings.php:/var/www/html/LocalSettings.php"
-      - "/Users/nakadats/Desktop/coconala/mediawiki/images:/var/www/html/images"
   mysql:
     container_name: mariadb
     image: mariadb
